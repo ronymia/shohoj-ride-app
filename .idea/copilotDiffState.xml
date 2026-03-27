@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="/babel.config (snapshot).js">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/babel.config (snapshot).js" />
+              <option name="originalContent" value="module.exports = function (api) {&#10;    api.cache(true);&#10;    return {&#10;        presets: [[&quot;babel-preset-expo&quot;, { jsxImportSource: &quot;nativewind&quot; }]],&#10;        plugins: [&quot;nativewind/babel&quot;, &quot;react-native-reanimated/plugin&quot;],&#10;    };&#10;};" />
+              <option name="updatedContent" value="module.exports = function (api) {&#10;    api.cache(true);&#10;    return {&#10;        presets: [&#10;            [&quot;babel-preset-expo&quot;, { jsxImportSource: &quot;nativewind&quot; }],&#10;            &quot;nativewind/babel&quot;,&#10;        ],&#10;        plugins: [&quot;react-native-reanimated/plugin&quot;],&#10;    };&#10;};" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
