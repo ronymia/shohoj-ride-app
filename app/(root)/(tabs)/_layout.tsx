@@ -29,7 +29,7 @@ const TabIcon = ({
 export default function Layout() {
   return (
     <Tabs
-      initialRouteName="index"
+      initialRouteName="home"
       screenOptions={{
         tabBarActiveTintColor: "white",
         tabBarInactiveTintColor: "white",
@@ -38,7 +38,7 @@ export default function Layout() {
           backgroundColor: "#333333",
           borderTopWidth: 0,
           borderRadius: 50,
-          paddingBottom: 0, // ERROR CONTROL: Responsive padding would be better but fixed is safer for now
+          paddingBottom: 20,
           overflow: "hidden",
           marginHorizontal: 20,
           marginBottom: 20,
@@ -94,4 +94,3 @@ export default function Layout() {
     </Tabs>
   );
 }
-
