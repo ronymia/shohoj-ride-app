@@ -1289,6 +1289,21 @@
     chalk "^4.1.0"
     js-yaml "^4.1.0"
 
+"@gorhom/bottom-sheet@^5.2.9":
+  version "5.2.9"
+  resolved "https://registry.yarnpkg.com/@gorhom/bottom-sheet/-/bottom-sheet-5.2.9.tgz#57d26ab8a4a881bb4be8fd45a4b9539929c9f198"
+  integrity sha512-YwieCsEnTQnN2QW4VBKfCGszzxaw2ID7FydusEgqo7qB817fZ45N88kptcuNwZFnnauCjdyzKdrVBWmLmpl9oQ==
+  dependencies:
+    "@gorhom/portal" "1.0.14"
+    invariant "^2.2.4"
+
+"@gorhom/portal@1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@gorhom/portal/-/portal-1.0.14.tgz#1953edb76aaba80fb24021dc774550194a18e111"
+  integrity sha512-MXyL4xvCjmgaORr/rtryDNFy3kU4qUbKlwtQqqsygd0xX3mhKjOLn6mQK8wfu0RkoE0pBE0nAasRoHua+/QZ7A==
+  dependencies:
+    nanoid "^3.3.1"
+
 "@humanfs/core@^0.19.1":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@humanfs/core/-/core-0.19.1.tgz#17c55ca7d426733fe3c561906b8173c336b40a77"
@@ -2144,6 +2159,11 @@
   resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-5.6.0.tgz#cbb5b5f6110f870ca7de7e8ea3d189e9525a1019"
   integrity sha512-w8CEY73X/7tw2KKlL3iOk679V9bWseE4GzNz3zlaYxcTjmcmWOathRb0emgo/QQ3eoNzmq68+2Y2gxluAv3xGw==
 
+"@stripe/stripe-react-native@0.50.3":
+  version "0.50.3"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-react-native/-/stripe-react-native-0.50.3.tgz#4b80e55807a297127d8bd109c304309bbf179cf1"
+  integrity sha512-nzOjqZXQKdM7y33Em2JZxCTAgf/q/J51IJQ50XtwIL0QT6Jt5WSmfKm9rGmBhoXxxG4DcXu/qxJeAHlhcPDGQg==
+
 "@swc/helpers@0.5.17":
   version "0.5.17"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.17.tgz#5a7be95ac0f0bf186e7e6e890e7a6f6cda6ce971"
@@ -2200,6 +2220,11 @@
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.8.tgz#958b91c991b1867ced318bedea0e215ee050726e"
   integrity sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==
+
+"@types/geojson@^7946.0.13":
+  version "7946.0.16"
+  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.16.tgz#8ebe53d69efada7044454e3305c19017d97ced2a"
+  integrity sha512-6C8nqWur3j98U6+lXDfTUWIfgvZU+EumvpHKcYjujKH7woYyLj2sUmff0tRhrqM7BohUw7Pz3ZB1jj2gW9Fvmg==
 
 "@types/graceful-fs@^4.1.3":
   version "4.1.9"
@@ -4148,6 +4173,11 @@ expo-local-authentication@~17.0.8:
   dependencies:
     invariant "^2.2.4"
 
+expo-location@~19.0.8:
+  version "19.0.8"
+  resolved "https://registry.yarnpkg.com/expo-location/-/expo-location-19.0.8.tgz#1805393151b1286021c1ad36246b6fd095d09b55"
+  integrity sha512-H/FI75VuJ1coodJbbMu82pf+Zjess8X8Xkiv9Bv58ZgPKS/2ztjC1YO1/XMcGz7+s9DrbLuMIw22dFuP4HqneA==
+
 expo-modules-autolinking@3.0.24:
   version "3.0.24"
   resolved "https://registry.yarnpkg.com/expo-modules-autolinking/-/expo-modules-autolinking-3.0.24.tgz#55fdfe1ef5a053d5cc287582170a5f6d69ab0e30"
@@ -5467,6 +5497,11 @@ lodash.debounce@^4.0.8:
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
 
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==
+
 lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
@@ -6046,7 +6081,7 @@ mz@^2.7.0:
     object-assign "^4.0.1"
     thenify-all "^1.0.0"
 
-nanoid@^3.3.11, nanoid@^3.3.7, nanoid@^3.3.8:
+nanoid@^3.3.1, nanoid@^3.3.11, nanoid@^3.3.7, nanoid@^3.3.8:
   version "3.3.11"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.11.tgz#4f4f112cefbe303202f2199838128936266d185b"
   integrity sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==
@@ -6653,7 +6688,7 @@ prompts@^2.3.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.5.10, prop-types@^15.8.1:
+prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -6680,6 +6715,13 @@ qrcode@^1.5.4:
     dijkstrajs "^1.0.1"
     pngjs "^5.0.0"
     yargs "^15.3.1"
+
+qs@^6.14.1:
+  version "6.15.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.15.1.tgz#bdb55aed06bfac257a90c44a446a73fba5575c8f"
+  integrity sha512-6YHEFRL9mfgcAvql/XhwTvf5jKcOiiupt2FiJxHkiX1z4j7WL8J/jRHYLluORvc1XxB5rV20KoeK00gVJamspg==
+  dependencies:
+    side-channel "^1.1.0"
 
 query-string@^7.1.3:
   version "7.1.3"
@@ -6786,10 +6828,34 @@ react-native-gesture-handler@~2.28.0:
     hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
 
+react-native-google-places-autocomplete@^2.6.4:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/react-native-google-places-autocomplete/-/react-native-google-places-autocomplete-2.6.4.tgz#221541c9d4a9d52b99a4402e7a950a2ee2a0e17a"
+  integrity sha512-/DjXEa20doSJYiykqLbTAPL3GtIHVRdjpAoPpxnLXK6uFi103wdqXZoqXnKdqlov/lJLIO8Wex6GIu6MZz3Osw==
+  dependencies:
+    lodash.debounce "^4.0.8"
+    qs "^6.14.1"
+    react-native-uuid "^2.0.3"
+
 react-native-is-edge-to-edge@^1.1.6, react-native-is-edge-to-edge@^1.2.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/react-native-is-edge-to-edge/-/react-native-is-edge-to-edge-1.3.1.tgz#feb9a6a8faf0874298947edd556e5af22044e139"
   integrity sha512-NIXU/iT5+ORyCc7p0z2nnlkouYKX425vuU1OEm6bMMtWWR9yvb+Xg5AZmImTKoF9abxCPqrKC3rOZsKzUYgYZA==
+
+react-native-maps-directions@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/react-native-maps-directions/-/react-native-maps-directions-1.9.0.tgz#63ae8e8b36499042a658e43cd4836ac89aab8b7d"
+  integrity sha512-68SrMOUg4WQ5PmpS9sNOTZaYtdyVYJnnjQOOhABrgiKnb5BXCZRU2gDoS11gYf23hjUBjq8JXzgfn37WcINLwA==
+  dependencies:
+    lodash.isequal "^4.5.0"
+    prop-types "^15.6.0"
+
+react-native-maps@1.20.1:
+  version "1.20.1"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-1.20.1.tgz#f613364886b2f72db56cafcd2bd7d3a35f470dfb"
+  integrity sha512-NZI3B5Z6kxAb8gzb2Wxzu/+P2SlFIg1waHGIpQmazDSCRkNoHNY4g96g+xS0QPSaG/9xRBbDNnd2f2/OW6t6LQ==
+  dependencies:
+    "@types/geojson" "^7946.0.13"
 
 react-native-modal@^14.0.0-rc.1:
   version "14.0.0-rc.1"
@@ -6838,6 +6904,11 @@ react-native-url-polyfill@2.0.0:
   integrity sha512-My330Do7/DvKnEvwQc0WdcBnFPploYKp9CYlefDXzIdEaA+PAhDYllkvGeEroEzvc4Kzzj2O4yVdz8v6fjRvhA==
   dependencies:
     whatwg-url-without-unicode "8.0.0-3"
+
+react-native-uuid@^2.0.3:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-uuid/-/react-native-uuid-2.0.4.tgz#0c4f345523c5feac0282d3a51fe19887727df988"
+  integrity sha512-LSJNeh559qC17fgVPBsWuTSW/OygFp2dwTcf94IQBLYft5FzIQS9pCsuT36OPvyvDOMb6yiGr6TafaJDnz9PPQ==
 
 react-native-web@~0.21.0:
   version "0.21.2"
@@ -7569,6 +7640,11 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==
+
+stripe@^22.0.1:
+  version "22.0.1"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-22.0.1.tgz#7aff5f7f8d6ce21d0289dbb0b446f3077a9b473c"
+  integrity sha512-Yw764pZ6s8Xu4CtUZdD5uWOkw6gc9xzO9OKylCuj1gMhMDLbyGbDtaPNNSFE4mB6njYSHESYIVbF1iIzUfAl2g==
 
 structured-headers@^0.4.1:
   version "0.4.1"
@@ -8309,3 +8385,8 @@ zustand@5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/zustand/-/zustand-5.0.3.tgz#b323435b73d06b2512e93c77239634374b0e407f"
   integrity sha512-14fwWQtU3pH4dE0dOpdMiWjddcH+QzKIgk1cl8epwSE7yag43k/AD/m4L6+K7DytAOr9gGBe3/EXj9g7cdostg==
+
+zustand@^5.0.12:
+  version "5.0.12"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-5.0.12.tgz#ed36f647aa89965c4019b671dfc23ef6c6e3af8c"
+  integrity sha512-i77ae3aZq4dhMlRhJVCYgMLKuSiZAaUPAct2AksxQ+gOtimhGMdXljRT21P5BNpeT4kXlLIckvkPM029OljD7g==

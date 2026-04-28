@@ -9,9 +9,19 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.shohoj.ride",
+      "config": {
+        "googleMapsApiKey": "EXPO_PUBLIC_GOOGLE_API_KEY_PLACEHOLDER"
+      }
     },
     "android": {
+      "package": "com.shohoj.ride",
+      "config": {
+        "googleMaps": {
+          "apiKey": "EXPO_PUBLIC_GOOGLE_API_KEY_PLACEHOLDER"
+        }
+      },
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -28,6 +38,13 @@
     "plugins": [
       "@clerk/expo",
       "expo-router",
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "merchant.com.shohoj.ride",
+          "enableGooglePay": true
+        }
+      ],
       [
         "expo-splash-screen",
         {
