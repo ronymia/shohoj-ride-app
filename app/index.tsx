@@ -1,14 +1,17 @@
 import { useAuth } from "@clerk/expo";
 import { Redirect } from "expo-router";
 
-const Home = () => {
-  const { isSignedIn } = useAuth();
+const Index = () => {
+  const { isSignedIn, isLoaded } = useAuth();
+
+  // Wait for Clerk to restore the persisted session before redirecting
+  if (!isLoaded) return null;
 
   if (isSignedIn) {
     return <Redirect href="/(root)/(tabs)/home" />;
   }
 
-  return <Redirect href={`/(auth)/welcome`} />;
+  return <Redirect href="/(auth)/welcome" />;
 };
 
-export default Home;
+export default Index;

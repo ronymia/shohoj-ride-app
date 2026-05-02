@@ -3,7 +3,7 @@ import CustomButton from "@/components/CustomButton";
 import InputField from "@/components/InputField";
 import { icons, images } from "@/constants";
 import { useSignIn } from "@clerk/expo";
-import { Href, Link, useRouter } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { useState } from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 import ReactNativeModal from "react-native-modal";
@@ -40,23 +40,8 @@ export default function SignIn() {
     }
 
     if (signIn.status === "complete") {
-      await signIn.finalize({
-        navigate: ({ session, decorateUrl }) => {
-          if (session?.currentTask) {
-            // Handle pending session tasks
-            // See https://clerk.com/docs/guides/development/custom-flows/authentication/session-tasks
-            console.log(session?.currentTask);
-            return;
-          }
-
-          const url = decorateUrl("/");
-          if (url.startsWith("http")) {
-            window.location.href = url;
-          } else {
-            router.push(url as Href);
-          }
-        },
-      });
+      await signIn.finalize();
+      router.replace("/(root)/(tabs)/home");
     } else if (signIn.status === "needs_second_factor") {
       // See https://clerk.com/docs/guides/development/custom-flows/authentication/multi-factor-authentication
     } else if (signIn.status === "needs_client_trust") {
@@ -79,23 +64,8 @@ export default function SignIn() {
     await signIn.mfa.verifyEmailCode({ code: verification.code });
 
     if (signIn.status === "complete") {
-      await signIn.finalize({
-        navigate: ({ session, decorateUrl }) => {
-          if (session?.currentTask) {
-            // Handle pending session tasks
-            // See https://clerk.com/docs/guides/development/custom-flows/authentication/session-tasks
-            console.log(session?.currentTask);
-            return;
-          }
-
-          const url = decorateUrl("/");
-          if (url.startsWith("http")) {
-            window.location.href = url;
-          } else {
-            router.push(url as Href);
-          }
-        },
-      });
+      await signIn.finalize();
+      router.replace("/(root)/(tabs)/home");
     } else {
       // Check why the sign-in is not complete
       console.error("Sign-in attempt not complete:", signIn);

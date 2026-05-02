@@ -1,3 +1,4 @@
+import CustomButton from "@/components/CustomButton";
 import GoogleTextInput from "@/components/GoogleTextInput";
 import Map from "@/components/Map";
 import RideCard from "@/components/RideCard";
@@ -5,7 +6,7 @@ import { icons, images } from "@/constants";
 import { useFetch } from "@/libs/fetch";
 import { useLocationStore } from "@/store";
 import { Ride } from "@/types/type";
-import { useUser } from "@clerk/expo";
+import { useAuth, useUser } from "@clerk/expo";
 import * as Location from "expo-location";
 import { router } from "expo-router";
 import { useEffect, useState } from "react";
@@ -17,6 +18,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import ReactNativeModal from "react-native-modal";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 // const recentRides = [
@@ -130,6 +132,7 @@ const Home = () => {
   const { user } = useUser();
   const { setUserLocation, setDestinationLocation } = useLocationStore();
   const [hasPermission, setHasPermission] = useState<boolean>(false);
+  const [showSignOutModal, setShowSignOutModal] = useState(false);
 
   const {
     data: recentRides,
@@ -137,7 +140,13 @@ const Home = () => {
     error,
   } = useFetch<Ride[]>(`/(api)/ride/${user?.id}`);
 
-  const handleSignOut = async () => {};
+  const { signOut } = useAuth();
+  const handleSignOut = () => setShowSignOutModal(true);
+  const confirmSignOut = async () => {
+    setShowSignOutModal(false);
+    await signOut();
+    router.replace("/(auth)/sign-in");
+  };
   const handleDestinationPress = (location: {
     latitude: number;
     longitude: number;
@@ -275,6 +284,40 @@ const Home = () => {
           </>
         }
       />
+      {/* SIGN OUT CONFIRMATION MODAL */}
+      <ReactNativeModal
+        isVisible={showSignOutModal}
+        onBackdropPress={() => setShowSignOutModal(false)}
+        onBackButtonPress={() => setShowSignOutModal(false)}
+        animationIn="zoomIn"
+        animationOut="zoomOut"
+      >
+        <View className="bg-white px-7 py-9 rounded-2xl items-center">
+          <Image
+            source={icons.out}
+            className="w-14 h-14 mb-4"
+            tintColor="#e11d48"
+            resizeMode="contain"
+          />
+          <Text className="text-2xl font-JakartaExtraBold text-center mb-2">
+            Sign Out
+          </Text>
+          <Text className="text-gray-500 font-Jakarta text-center mb-6">
+            Are you sure you want to sign out of your account?
+          </Text>
+          <CustomButton
+            title="Yes, Sign Out"
+            onPress={confirmSignOut}
+            className="w-full mb-3 bg-rose-600"
+          />
+          <CustomButton
+            title="Cancel"
+            onPress={() => setShowSignOutModal(false)}
+            className="w-full bg-neutral-100"
+            textVariant="primary"
+          />
+        </View>
+      </ReactNativeModal>
     </SafeAreaView>
   );
 };
